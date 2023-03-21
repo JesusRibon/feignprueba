@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface ProductoRepository extends JpaRepository<ProductoDto, String> {
-  @Query(nativeQuery = true , value = "update producto_dto set nombreproducto = :nombreproducto , cantidad = :cantidad , precio = :precio where idproducto = :producto")
+  @Query(nativeQuery = true , value = "update producto_dto set nombreproducto = :nombreproducto , cantidad = :cantidad , precio = :precio where idproducto = :idproducto")
   @Modifying
   void updateProducto(@Param("nombreproducto") String nombreproducto,
                       @Param("idproducto" )String idproducto,
