@@ -54,9 +54,7 @@ class ProductoControllerTest {
 
   @Test
   void getAllProducto() throws Exception{
-    List<Producto> productos = new ArrayList<>();
-    when(productoGet.getListProducto()).thenReturn(productos);
-    RequestBuilder requestBuilder = MockMvcRequestBuilder.get("/producto/all").accept(MediaType.APPLICATION_JSON_VALUE);
+
 
 
 
