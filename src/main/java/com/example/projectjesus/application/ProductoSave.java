@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 @Service
 @Slf4j
 
+
 public class ProductoSave {
 
   private final ProdcutoSaveService prodcutoSaveService;
@@ -24,10 +25,10 @@ public class ProductoSave {
     Producto producto1 = productoGetService.getProdcuto(producto.getIdproducto());
 
     if (producto1 != null) {
-      throw new ProductoExeption("Producto ya existe  " + producto.getIdproducto());
+      throw new ProductoExeption("Producto ya existe  con id de prodcuto de: " + producto.getIdproducto());
     }else{
       log.info("Producto subido exitosamente");
-      return prodcutoSaveService.save(producto1);
+      return prodcutoSaveService.save(producto);
     }
 
   }

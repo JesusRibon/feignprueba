@@ -9,6 +9,7 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 public class ProjectjesusApplication {
 
 	public static void main(String[] args) {
+		System.getProperties().put("server.port", 8082);
 		SpringApplication.run(ProjectjesusApplication.class, args);
 	}
 

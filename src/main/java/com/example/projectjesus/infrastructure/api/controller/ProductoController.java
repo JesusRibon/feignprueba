@@ -53,7 +53,7 @@ public ResponseEntity<Producto> saveProducto(@RequestBody Producto producto){
   }
 
   @DeleteMapping("/idproducto/{idproducto}")
-  public void deleteProducto(@PathVariable String idproducto){
+  public void deleteProducto(@RequestParam String idproducto){
     productoDelete.deleteProducto(idproducto);
   }
 
