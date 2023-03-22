@@ -7,6 +7,7 @@ import com.example.projectjesus.application.ProductoUpdate;
 import com.example.projectjesus.domain.entities.Producto;
 import java.util.List;
 import lombok.AllArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -15,12 +16,14 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @AllArgsConstructor
+@Slf4j
 @RequestMapping(path = "/producto")
 public class ProductoController {
   private  final ProductoSave productoSave;
@@ -29,12 +32,9 @@ public class ProductoController {
   private final ProductoUpdate productoUpdate;
   private final ProductoDelete productoDelete;
 
-
-
-
   @PostMapping
 public ResponseEntity<Producto> saveProducto(@RequestBody Producto producto){
-return new ResponseEntity<>(productoSave.saveProducto(producto), HttpStatus.CREATED);
+    return new ResponseEntity<>(productoSave.saveProducto(producto) , HttpStatus.CREATED);
   }
 
   @GetMapping(value = "/all")

@@ -18,7 +18,10 @@ public class UserGetAdapter implements UserGetService {
 
   @Override
   public User getUser(String documento) {
-    return userMapper.toUserEntity(userClient.getUser(documento));
+
+    User user =userMapper.toUserEntity(userClient.getUser(documento));
+    user.toString();
+    return user;
   }
 
 }
