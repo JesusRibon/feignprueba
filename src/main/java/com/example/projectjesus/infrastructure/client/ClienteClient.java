@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 
 @FeignClient(name = "client-1", url = "localhost:8080")
-public interface UserClient {
+public interface ClienteClient {
 
-@GetMapping("/user")
-  UserResponse getUser(@RequestParam String documento);
+@GetMapping("/cliente")
+ClienteResponse getCliente(@RequestParam String idcliente);
 
 
 

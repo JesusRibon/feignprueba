@@ -10,11 +10,11 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @Data
 @Entity
-public class UserDto {
+public class ClienteDto {
+  @Id
+  private String idcliente;
   private String nombre;
   private String apellido;
-  private String tipo;
-  @Id
-  private String documento;
+  private boolean estado;
 
 }

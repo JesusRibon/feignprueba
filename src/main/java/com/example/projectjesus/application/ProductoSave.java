@@ -3,7 +3,6 @@ package com.example.projectjesus.application;
 import com.example.projectjesus.domain.entities.Producto;
 import com.example.projectjesus.domain.service.ProdcutoSaveService;
 import com.example.projectjesus.domain.service.ProductoGetService;
-import com.example.projectjesus.infrastructure.adapter.UserGetAdapter;
 import com.example.projectjesus.shared.ProductoExeption;
 import lombok.AllArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -17,7 +16,7 @@ import org.springframework.stereotype.Service;
 public class ProductoSave {
 
   private final ProdcutoSaveService prodcutoSaveService;
-  private final UserGetAdapter userGetAdapter;
+
   private final ProductoGetService productoGetService;
 
 

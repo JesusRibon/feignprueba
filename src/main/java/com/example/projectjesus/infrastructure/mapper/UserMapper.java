@@ -2,15 +2,15 @@ package com.example.projectjesus.infrastructure.mapper;
 
 
 
-import com.example.projectjesus.domain.entities.User;
-import com.example.projectjesus.infrastructure.client.UserResponse;
+import com.example.projectjesus.domain.entities.Cliente;
+import com.example.projectjesus.infrastructure.client.ClienteResponse;
 import org.mapstruct.Mapper;
 
 @Mapper(componentModel = "Spring")
 public interface UserMapper {
- User toUserEntity(UserResponse userResponse);
+ Cliente toClienteEntity(ClienteResponse clienteResponse);
 
- UserResponse toUserResponse(User user);
+ ClienteResponse toClienteResponse(Cliente cliente);
 
 
 

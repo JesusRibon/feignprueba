@@ -1,21 +1,23 @@
 package com.example.projectjesus.infrastructure.client;
 
+
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor
 @Data
-public class UserResponse {
+public class ClienteResponse {
+
+  private String idcliente;
   private String nombre;
   private String apellido;
-  private String tipo;
-  private String documento;
+  private boolean estado;
 
-  public UserResponse(String nombre, String apellido , String tipo , String documento){
+  public ClienteResponse(String idcliente , String nombre , String apellido , boolean estado){
+    this.idcliente = idcliente;
     this.nombre = nombre;
     this.apellido = apellido;
-    this.tipo = tipo;
-    this.documento = documento;
+    this.estado = estado;
   }
 
 }
